@@ -109,19 +109,19 @@ CONFIGURATION                                          *miniSnip-configuration*
 
 -------------------------------------------------------------------------------
                                                             *'g:miniSnip_dirs'*
-Default: '[ substitute(&rtp, ",.*", "", "")."/miniSnip" ]'
-          (which evaluates usually to `~/.vim/minSnip`)
+Default: '[]'
 
-A list of directories to look for snippet files.
+A list of directories to look for snippet files. If empty, |runtimepath| is used.
 
 For example to share system-wide snippets: >
     let g:miniSnip_dirs = [ '/usr/share/miniSnip', '~/.vim/miniSnip' ]
 
 -------------------------------------------------------------------------------
                                                            *'g:miniSnip_local'*
-Default: 1
+Default: ".miniSnip"
 
-Whether to read snippets from `.miniSnip` directory under current location.
+If not empty, will read snippets from directory with that name under current
+location.
 
 -------------------------------------------------------------------------------
                                                              *'g:miniSnip_ext'*
